@@ -48,8 +48,10 @@ const styleTestHelpers = `
  * 5) The base color as the text color against the base color at 0.08 opacity as the background color
  * 6) The base color as the text color against the base color at 0.12 opacity as the background color
  * 7) The base color as the text color against the base color at 0.16 opacity as the background color
+ *
+ * Important: We test both modes because the dark palette colors differ on iOS and MD.
  */
-configs({ modes: ['md'], directions: ['ltr'], palettes: ['light', 'dark'] }).forEach(({ config, title }) => {
+configs({ directions: ['ltr'], palettes: ['light', 'dark'] }).forEach(({ config, title }) => {
   const colors = ['primary', 'secondary', 'tertiary', 'success', 'warning', 'danger', 'light', 'medium', 'dark'];
 
   test.describe(title('theme'), () => {

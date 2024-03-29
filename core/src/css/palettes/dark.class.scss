@@ -1,9 +1,5 @@
 @import "./dark";
 
-.ion-palette-dark {
-  @include dark-base-palette();
-}
-
 .ion-palette-dark.ios {
   @include dark-ios-palette();
 }

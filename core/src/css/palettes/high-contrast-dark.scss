@@ -1,6 +1,11 @@
 @use "sass:map";
 @import "../../themes/ionic.functions.color";
 
+/// Unlike the standard contrast dark palette, we do not need separate color values
+/// for the high contrast dark palette between iOS and MD. In order to reach AAA color
+/// contrast levels, the colors here need to be desaturated. As a result, the text typically
+/// needs to be black.
+
 $primary:         #7cabff !default;
 $secondary:       #62bdff !default;
 $tertiary:        #b6b9f9 !default;
@@ -111,7 +116,7 @@ $lightest-text-color: $text-color;
 
 @mixin high-contrast-dark-ios-palette() {
   $background-color: #000000;
-  
+
   & {
     --ion-background-color: #{$background-color};
     --ion-background-color-rgb: #{color-to-rgb-list($background-color)};
@@ -175,7 +180,7 @@ $lightest-text-color: $text-color;
 
 @mixin high-contrast-dark-md-palette() {
   $background-color: #121212;
-  
+
   & {
     --ion-background-color: #{$background-color};
     --ion-background-color-rgb: #{color-to-rgb-list($background-color)};
